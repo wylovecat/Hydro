@@ -76,7 +76,7 @@ export default class POJProvider extends BasicFetcher implements IBasicProvider 
             .children[0].children[0].children[0];
         const time = info.children[0].innerHTML.split('</b> ')[1].toLowerCase().trim();
         const memory = info.children[2].innerHTML.split('</b> ')[1].toLowerCase().trim();
-        const contents = {};
+        const contents: { name: string; lang: string; content: string }[] = [];
         const images = {};
         let tag = '';
         for (const lang of languages) {
@@ -147,7 +147,7 @@ export default class POJProvider extends BasicFetcher implements IBasicProvider 
                 } else html += node.innerHTML;
             }
             if (lang in langs) {
-                contents[`${langs[lang]}.html`] = { lang: langs[lang], content: html };
+                contents.push({ name: `${langs[lang]}.html`, lang: langs[lang], content: html });
             }
         }
         return {
