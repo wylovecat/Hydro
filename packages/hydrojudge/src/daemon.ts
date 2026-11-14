@@ -45,14 +45,14 @@ process.on('unhandledRejection', (reason, p) => {
 });
 
 async function daemon() {
-    const shouldRun = await versionCheck((msg) => log.error(msg));
+    const shouldRun = await versionCheck((msg) => log.warn(msg), (msg) => log.error(msg));
     if (!shouldRun) process.exit(1);
     const tracing = getConfig('tracing');
     if (tracing?.endpoint && tracing?.samplePercentage) initTracing(tracing.endpoint, tracing.samplePercentage);
     const _hosts = getConfig('hosts');
     const queue = new PQueue({ concurrency: Infinity });
     await fs.ensureDir(getConfig('tmp_dir'));
-    queue.on('error', (e) => log.error(e));
+    queue.addEventListener('error', (e) => log.error(e.detail));
     if (!Object.keys(_hosts).length) {
         log.warn('No host configured');
         setInterval(() => log.warn('No host configured'), Time.hour);

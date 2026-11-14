@@ -109,7 +109,19 @@ Hydro 用户群：1085853538
 同时群内可能存在部分令您感到不适或感到冒犯的内容。若对此有顾虑**请勿加群**。
 
 <details>
-<summary><h2>更新日志（点击展开）</h2></summary
+<summary><h2>更新日志（点击展开）</h2></summary>
+
+## Hydro 5.1.0 / UI 4.59.1
+
+- core: 支持同语言添加多个题面
+- ui: 优化 monaco worker 加载
+- db: 添加 HYDRO_BACKUP_DIR 选项
+- ui: UserSelectAutoComplete: 添加查询缓存
+- core: 支持组队参赛
+- core: 修复自测过滤
+- core: 修复批量设置用户角色
+- judge: 添加交互题退出顺序检测
+- core&ui: 交互优化
 
 ## Hydro 5.0.5 / UI 4.58.5
 
@@ -1048,13 +1060,15 @@ Hydro 用户群：1085853538
 
 基于 AGPL3 协议第七条，您在使用本项目时，需要遵守以下额外条款：
 
-1. 不可移除本项目的版权声明与作者/来源署名；（[AGPL3 7(b)](LICENSE#L356)）
+1. 不可移除、隐藏、遮挡本项目的版权声明与作者/来源署名；（[AGPL3 7(b)](LICENSE#L356)）
 2. 当重分发经修改后的本软件时，需要在软件名或版本号中采用可识别的方式进行注明；（[AGPL3 7(c)](LICENSE#L360)）
 3. 除非得到许可，不得以宣传为目的使用作者姓名；（[AGPL3 7(d)](LICENSE#364)）
 
 即：  
 在您部署 Hydro 时，需要保留底部的 `Powered by Hydro` 字样，其中的 `Hydro` 字样需指向 `hydro.js.org/本仓库/fork` 之一的链接。  
 若您对源码做出修改/扩展，同样需要以 AGPL-3.0-or-later 开源，您可以以 `Powered by Hydro, Modified by xxx` 格式在页脚注明。  
+
+对于经提醒仍不整改的项目，将列入 [HALL_OF_SHAME.md](HALL_OF_SHAME.md)，同时项目组保留通过法律途径追究责任的权利。
 
 ## 贡献代码
 
