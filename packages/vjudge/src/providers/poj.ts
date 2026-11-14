@@ -76,7 +76,7 @@ export default class POJProvider extends BasicFetcher implements IBasicProvider 
             .children[0].children[0].children[0];
         const time = info.children[0].innerHTML.split('</b> ')[1].toLowerCase().trim();
         const memory = info.children[2].innerHTML.split('</b> ')[1].toLowerCase().trim();
-        const contents: { name: string; lang: string; content: string }[] = [];
+        const contents: { name: string, lang: string, content: string }[] = [];
         const images = {};
         let tag = '';
         for (const lang of languages) {
