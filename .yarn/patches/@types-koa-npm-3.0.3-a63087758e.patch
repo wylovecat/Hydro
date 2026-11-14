@@ -1,0 +1,13 @@
+diff --git a/index.d.ts b/index.d.ts
+index 3ea4b4ae81171cda38c6ea2c103a05489d3ffe03..a8d2ce2e4b61eb9441059b8c8d4786218f24eea0 100644
+--- a/index.d.ts
++++ b/index.d.ts
+@@ -355,7 +355,7 @@ declare interface ContextDelegatedResponse {
+      * Set Content-Disposition to "attachment" to signal the client to prompt for download.
+      * Optionally specify the filename of the download and some options.
+      */
+-    attachment(filename?: string, options?: contentDisposition.Options): void;
++    attachment(filename?: string, options?: contentDisposition.CreateOptions): void;
+ 
+     /**
+      * Return the response mime type void of
